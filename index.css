@@ -33,9 +33,20 @@ input {
 
 input::placeholder
 {
+    text-align: left;
+    padding:10px;
     color:#fff;
     font-weight: 800;
+    opacity: 0.3;
 }
+
+input:hover::placeholder
+{
+    color:#FFECC7;
+    opacity: 0.7;
+}
+
+
 
 button {
     color: #FDFDFD;

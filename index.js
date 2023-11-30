@@ -13,6 +13,11 @@ const inputFieldEl = document.getElementById("input-field")
 const addButtonEl = document.getElementById("add-button")
 const shoppingListEl = document.getElementById("shopping-list")
 const errorMessage = document.getElementById("error-message");
+let i = 0;
+let placeholder = "";
+const txt = "type here . . . ";
+const speed = 180;
+
 
 addButtonEl.addEventListener("click", function() {
     let inputValue = inputFieldEl.value
@@ -76,3 +81,13 @@ function appendItemToShoppingListEl(item) {
     
     shoppingListEl.append(newEl)
 }
+
+function typeAnimation()
+{
+    placeholder += txt.charAt(i);
+    inputFieldEl.setAttribute("placeholder", placeholder);
+    i++;
+    setTimeout(typeAnimation,speed);
+}
+
+typeAnimation();
