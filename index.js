@@ -88,6 +88,7 @@ function typeAnimation()
     inputFieldEl.setAttribute("placeholder", placeholder);
     i++;
     setTimeout(typeAnimation,speed);
+    
 }
-
+console.log("a mers");
 typeAnimation();
